@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Buydirect.WEB" parallel="tests" thread-count="1">
+	<listeners>
+		<listener class-name="reusableComponents.ListenersImplementation" />
+	</listeners>
+	<test name="SignInPageTest">
+		<classes>
+			<class name="Tests.SignInPageTest" />
+
+		</classes>
+	</test>
+	<test name="EnrollPageTest">
+		<classes>
+			<class name="Tests.EnrollPageTest" />
+
+		</classes>
+	</test>
+	<test name="WelcomePageTest">
+		<classes>
+			<class name="Tests.WelcomePageTest" />
+		</classes>
+	</test>
+	<test name="PlasticIndicatorPageTest">
+		<classes>
+			<class name="Tests.PlasticIndicaterPageTest" />
+		</classes>
+	</test>
+	<test name="BankIntroPageTest">
+		<classes>
+			<class name="Tests.BankIntroPageTest" />
+		</classes>
+	</test>
+
+	<test name="CDW_ABA_DDA_PageTest">
+		<classes>
+			<class name="Tests.CDW_ABA_DDA_PageTest" />
+		</classes>
+	</test>
+	<test name="CongratulationPageTest	">
+		<classes>
+			<class name="Tests.CongratulationPageTest" />
+		</classes>
+	</test>
+	<test name="CDW_ABA_DDA_CompleteMessagePage	">
+		<classes>
+			<class name="Tests.CDW_ABA_DDA_CompleteMessagePageTest" />
+		</classes>
+	</test>
+	<test name="CDWBankingDeclinePageTest	">
+		<classes>
+			<class name="Tests.CDWBankingDeclinePageTest" />
+		</classes>
+	</test>
+
+</suite>
