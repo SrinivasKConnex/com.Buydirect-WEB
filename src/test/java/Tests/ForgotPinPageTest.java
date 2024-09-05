@@ -24,7 +24,6 @@ public class ForgotPinPageTest extends TestBase {
 	@BeforeClass
 	public void beforeClass(ITestContext context) {
 		System.out.println("******************************");
-		// logger.info("******************************");
 		System.out.println("=>Starting testing on the ForgotPin Page.\n");
 		parentTest = ListenersImplementation.getReport().createTest("ForgotPin Page Test Started");
 		chaildTest = parentTest.createNode("=>Pre-required Action To Reach ForgotPin Page");
