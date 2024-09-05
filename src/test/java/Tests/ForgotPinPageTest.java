@@ -5,13 +5,50 @@ import static org.testng.Assert.fail;
 
 import java.util.HashMap;
 
+import org.testng.ITestContext;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import reusableComponents.DB_Operations;
+import reusableComponents.Helper;
+import reusableComponents.ListenersImplementation;
 import reusableComponents.SQLQuery;
+import testBase.ExtentFactory;
 import testBase.TestBase;
 
 public class ForgotPinPageTest extends TestBase {
+	
+	@BeforeClass
+	public void beforeClass(ITestContext context) {
+		System.out.println("******************************");
+		// logger.info("******************************");
+		System.out.println("=>Starting testing on the ForgotPin Page.\n");
+		parentTest = ListenersImplementation.getReport().createTest("ForgotPin Page Test Started");
+		chaildTest = parentTest.createNode("=>Pre-required Action To Reach ForgotPin Page");
+		ExtentFactory.getInstance().setExtent(chaildTest);
+		WelcomePageObject.clickSignIn();
+		SignInpageObject.clickForgetPinLink();
+	}
+
+	@AfterClass
+	public void afterClass() {
+
+		System.out.println("\n=>The test on the ForgotPin page has been completed.");
+		System.out.println("******************************");
+
+	}
+
+	@BeforeMethod
+	public void beforeMethod(ITestResult result) {
+		chaildTest = parentTest.createNode(result.getMethod().getMethodName());
+		ExtentFactory.getInstance().setExtent(chaildTest);
+		System.out.println(Helper.getcurrentDate() + " INFO: " + result.getMethod().getMethodName());
+
+	}
+
 	@Test
 	public void Test_HeaderLogo() {
 		try {
