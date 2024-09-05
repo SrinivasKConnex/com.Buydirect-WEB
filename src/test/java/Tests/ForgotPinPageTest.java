@@ -49,7 +49,6 @@ public class ForgotPinPageTest extends TestBase {
 		System.out.println(Helper.getcurrentDate() + " INFO: " + result.getMethod().getMethodName());
 
 	}
-	
 	@Test
 	public void Test_HeaderLogo() {
 		try {
