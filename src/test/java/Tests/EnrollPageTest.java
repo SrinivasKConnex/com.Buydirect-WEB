@@ -76,9 +76,6 @@ public class EnrollPageTest extends TestBase {
 			fail("Failed to verify header logo: " + e.getMessage());
 		}
 	}
-	
-	
-	
 
 	@Test
 	public void Test_HeaderImageIsBroken() {
