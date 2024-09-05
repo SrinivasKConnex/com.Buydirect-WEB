@@ -1,8 +1,5 @@
 package testBase;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
@@ -38,7 +35,6 @@ public class TestBase extends ActionEngine {
 		DeleteOldData.DeleteOldExtendedData(System.getProperty("user.dir") + "\\Reports\\Screenshots", day);
 		DeleteOldData.DeleteOldExtendedData(System.getProperty("user.dir") + "\\Reports\\TestReports", day);
 		ExtentFactory.getInstance().setExtent(test);
-
 	}
 
 	@BeforeClass
