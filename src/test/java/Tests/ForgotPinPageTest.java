@@ -10,6 +10,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import reusableComponents.DB_Operations;
@@ -19,8 +20,9 @@ import reusableComponents.SQLQuery;
 import testBase.ExtentFactory;
 import testBase.TestBase;
 
+@Listeners(reusableComponents.ListenersImplementation.class)
 public class ForgotPinPageTest extends TestBase {
-	
+
 	@BeforeClass
 	public void beforeClass(ITestContext context) {
 		System.out.println("******************************");

@@ -26,7 +26,7 @@ public class BrowserFactory {
 
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--incognito");
-			options.addArguments("--headless");
+			//options.addArguments("--headless");
 			options.addArguments("--disable-gpu");
 			options.addArguments("--window-size=1000,1000");
 			options.addArguments("--disable-extensions");
