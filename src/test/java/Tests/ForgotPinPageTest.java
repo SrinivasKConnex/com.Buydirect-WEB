@@ -71,7 +71,17 @@ public class ForgotPinPageTest extends TestBase {
 		}
 	}
 
-	
+	@Test
+	public void Test_PartnerTenderName() {
+		try {
+			assertEqualsString_custom(AbstractPageObject.getTenderName(),
+					DB_Operations.getSqlResultInMap(SQLQuery.Tender_name_Query).get("Tender_Name_Header"),
+					"Partner Tender Name");
+		} catch (Exception e) {
+			fail("Failed to verify partner tender name: " + e.getMessage());
+		}
+	}
+
 	@Test
 	public void Test_FooterTextWithPartnerPhoneNumberAndPartnerName() {
 		try {
