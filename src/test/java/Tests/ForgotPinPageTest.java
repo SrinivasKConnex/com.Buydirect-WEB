@@ -50,8 +50,6 @@ public class ForgotPinPageTest extends TestBase {
 
 	}
 	
-	
-
 	@Test
 	public void Test_HeaderLogo() {
 		try {
