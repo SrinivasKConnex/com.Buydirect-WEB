@@ -44,7 +44,6 @@ public class EnrollPageTest extends TestBase {
 	@BeforeClass
 	public void beforeClass(ITestContext context) {
 		System.out.println("******************************");
-		// logger.info("******************************");
 		System.out.println("=>Starting testing on the Enroll Page.\n");
 		parentTest = ListenersImplementation.getReport().createTest("Enroll Page Test Started");
 		chaildTest = parentTest.createNode("=>Pre-required Action To Reach Enroll Page");
@@ -77,6 +76,9 @@ public class EnrollPageTest extends TestBase {
 			fail("Failed to verify header logo: " + e.getMessage());
 		}
 	}
+	
+	
+	
 
 	@Test
 	public void Test_HeaderImageIsBroken() {
