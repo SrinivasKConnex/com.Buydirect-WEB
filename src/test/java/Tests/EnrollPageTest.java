@@ -77,9 +77,6 @@ public class EnrollPageTest extends TestBase {
 		}
 	}
 
-	
-	
-	
 	@Test
 	public void Test_HeaderImageIsBroken() {
 		try {
